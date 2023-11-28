@@ -23,5 +23,3 @@ Murilo Preto is currently pursuing a Bachelor's degree in Science and Technology
 
 * 2021-2022: Voluntary scientific initiation project at the Federal University of ABC:  _Interpretador de expressões faciais em comunicação à distância_.
 
-* Curriculum Lattes: <https://lattes.cnpq.br/1463378434181827>
-
