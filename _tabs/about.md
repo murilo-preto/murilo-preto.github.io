@@ -11,8 +11,8 @@ order: 4
 Murilo Preto is currently pursuing a Bachelor's degree in Science and Technology at the Federal University of ABC, with a focus on research and scientific production in Information Engineering, emphasizing network systems architecture, image processing, and voicebots.
 
 ## Academic Background
-* 2018-2020 - Completed high school at **Centro Educacional da Fundação Salvador Arena** (Colégio Termomecanica).
 * 2021-Ongoing - Bachelor's degree in **Science and Technology** at the **Federal University of ABC** (**UFABC**), with expected graduation in 2026.
+* 2018-2020 - Completed high school at **Centro Educacional da Fundação Salvador Arena** (Colégio Termomecanica).
 
 ## Main Academic Productions
 * _Desenvolvimento de aplicação baseada em voicebot para plataforma de telemonitoramento de pacientes baseado em cuidado híbrido_. In: Congresso Brasileiro de Informática em Saúde, 2022, Campinas. Anais do XIX Congresso Brasileiro de Informática em Saúde, 2022. p. 323-326.
