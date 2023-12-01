@@ -7,7 +7,7 @@ math: true
 image: https://ifsolutions.com/wp-content/uploads/2019/10/types-of-heat-exchangers-in-oil-and-gas-industry.jpg
 ---
 
-# Transferência de calor: Condução, Convecção e Radiação
+# Módulo 3 -- Transferência de calor: Condução, Convecção e Radiação
 A transferência de calor é um fenômeno que ocorre naturalmente sempre que há diferença de temperatura entre um ou mais meios. Por fim de classificação, a transferência de calor pode ocorrer através de três modos: condução, convecção e radiação.
 
 ## Modos de transferência de calor
@@ -37,11 +37,11 @@ Ademais, a convecção pode ser natural, ou seja, surgir em virtude da própria 
 - $ \dot{q}''' $ -- Densidade de potência \[$\frac{W}{m^3}$\]
 
 ### Lei de Fourier
-- \$$ \dot{q}_{x} = -kA\frac{\partial{T}}{\partial{x}} $$
-- \$$ \dot{q}_{x}''=\frac{\dot{q}_{x}}{A}=-k\frac{\partial{T}}{\partial{x}} $$
+- \$$ \large\dot{q}_{x} = -kA\frac{\partial{T}}{\partial{x}} $$
+- \$$ \large\dot{q}_{x}''=\frac{\dot{q}_{x}}{A}=-k\frac{\partial{T}}{\partial{x}} $$
 
 #### Equação de difusão de calor
-$$ \Large\frac{\partial{}}{\partial{x}}\left(k\frac{\partial{T}}{\partial{x}}\right) + \frac{\partial{}}{\partial{y}}\left(k\frac{\partial{T}}{\partial{y}}\right) + \frac{\partial{}}{\partial{z}}\left(k\frac{\partial{T}}{\partial{z}}\right) + q_{g}''' = \rho{}C_{p}\frac{\partial{T}}{\partial{t}} $$
+$$ \large\frac{\partial{}}{\partial{x}}\left(k\frac{\partial{T}}{\partial{x}}\right) + \frac{\partial{}}{\partial{y}}\left(k\frac{\partial{T}}{\partial{y}}\right) + \frac{\partial{}}{\partial{z}}\left(k\frac{\partial{T}}{\partial{z}}\right) + q_{g}''' = \rho{}C_{p}\frac{\partial{T}}{\partial{t}} $$
 
 ## Condução em parede plana
 No cenário onde a condução ocorre de maneira unidirecional, pode-se reduzir a equação de difusão de calor para: $$\frac{\partial{}}{\partial{x}}\left(k\frac{\partial{T}}{\partial{x}}\right)=0$$. Como $$\dot{q}_x''=-k\frac{\partial{T}}{\partial{x}}$$, logo $$\frac{\partial{q''}}{\partial{x}}=0$$. Então, $$\dot{q}_x''$$ ou $$-k\frac{\partial{T}}{\partial{x}}$$ é constante.
@@ -57,7 +57,7 @@ Assim, nota-se que a temperatura varia de acordo com a distância percorrida den
 ### Equação: temperatura total em função da distância
 Tal que, de forma ingênua, pode-se deduzir uma equação simplificada para a transferência de calor via parede unidimensional:
 
-$$ \Large{}T(x)=(T_{2}-T_{1})\frac{x}{L}+T_{1} $$
+$$ \large{}T(x)=(T_{2}-T_{1})\frac{x}{L}+T_{1} $$
 
 Essa equação, todavia, prevê uso em condições específicas, como:
 1. Condução unidimensional;
@@ -71,14 +71,41 @@ Neste caso, espera-se que a transferência de calor deva comportar-se linearment
 ### Equação: transferência de temperatura por condução
 Ignorando o coeficiente linear na equação para determinar a temperatura total, pode-se especificar a modelagem da equação de transporte:
 
-$$ \Large{}q_{x}=-kA\frac{dT}{dx}\approx{}kA\frac{T_{1}-T_{2}}{L} $$
+$$ \large{}q_{x}=-kA\frac{dT}{dx}\approx{}kA\frac{T_{1}-T_{2}}{L} $$
 
 No mesmo sentido, pode ser modelada a equação de fluxo de calor a partir da equação da taxa de transferência:
 
-$$ \Large{}q_{x}''=\frac{q_{x}}{A}\approx{}k\frac{T_{1}-T_{2}}{L} $$
+$$ \large{}q_{x}''=\frac{q_{x}}{A}\approx{}k\frac{T_{1}-T_{2}}{L} $$
 
+### Analogia com circuitos elétricos
+Assim como na lei de OHM, pode-se fazer uma relação similar entre a taxa de transferência de calor, a diferença de temperaturas e a resistência térmica. De tal forma, que muitos problemas podem ser simplificados ao montar um 'circuito térmico', que permite juntar resistências térmicas de diferentes materiais em uma conta unificada.
 
- 
+![analogia-circuitos](https://arquivos.respondeai.com.br/seo-mirror/theory/2023/238e3249-2554-4c6d-8b53-7540cbbb5608.webp){: .right }
+
+Isolando na equação de transferência, pode-se obter as resistências:
+- Resistência à condução: \$$R_{condução}=\frac{L}{kA}$$
+- Resistência à convecção: \$$R_{convecção}=\frac{1}{hA}$$
+- Resistência à radiação: \$$R_{radiação}=\frac{1}{h_{r}A}$$
+
 ## Sistemas radiais
- 
+O estudo de sistemas radiais é muito interessante, por exemplo, para a modelagem da transferência de calor em dutos e maquinários. A lei de fourier pode ser modificada para coordenadas cilíndricas com esse objetivo:
+
+$$ \large\frac{1}{r}\frac{\partial{}}{\partial{r}}\left(kr\frac{\partial{T}}{\partial{r}}\right) + \frac{1}{r^2}\frac{\partial{}}{\partial{\phi}}\left(k\frac{\partial{T}}{\partial{\phi}}\right) + \frac{\partial{}}{\partial{z}}\left(k\frac{\partial{T}}{\partial{z}}\right) + q_{g}''' = \rho{}C_{p}\frac{\partial{T}}{\partial{t}} $$
+
+Aplicando as mesmas simplificações, pode-se definir equação em função do raio, simplificando-a para problemas mais simples. Nesse caso, nota-se igualmente que um dos fatores deve ser constante para comportar as derivações.
+
+$$ \large{}kr\frac{dT}{dr}=cte $$
+
+Assim, obtêm se a família de soluções:
+
+$$ \large{}T(r)=C_{1}\left(\ln{r}\right)+C_{2} $$
+
+De tal forma que a resistência térmica pode ser definida como, para um **cilíndro oco**, por exemplo:
+
+$$ \Large{}R_{t,condução}=\frac{\ln{}\left(\frac{r_2}{r_1}\right)}{2k\pi{}L} $$
+
+![radial-composite](https://www.researchgate.net/publication/274075198/figure/fig1/AS:294743461384192@1447283725382/Oil-well-architecture-as-a-composite-cylindrical-wall.png)_Sistema radial com paredes compostas_
+
 ## Formulação concentrada
+### Condução em regime transiente
+
