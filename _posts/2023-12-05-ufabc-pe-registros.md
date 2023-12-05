@@ -67,4 +67,24 @@ int main(){
 ```
 
 ## Enum
-Similarmente ao **typedef**, o método enum
+Similarmente ao **typedef**, o método **enum** gera um novo tipo, porém agora listado de acordo com a ordem das entradas, numerado. Isto pode ser observado no exemplo:
+
+```c
+#include <stdio.h>
+
+enum meses {jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez};
+
+int main(){
+    enum meses a,b;
+    a = jan;
+    b = jun;
+
+    if (a!=b){
+        printf("%d é diferente de %d",a,b);
+    }
+    //-> Será printado '0 é diferente de 5'
+
+    return 0;
+}
+
+```
