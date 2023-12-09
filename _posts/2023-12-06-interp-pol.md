@@ -64,3 +64,11 @@ De forma que a variação entre os pontos deve ser calculada pela diferença. Fe
 $$ f(x)=a_0+a_1(x-x_0)+a_2(x-x_0)(x-x_1) $$
 
 E obtêm-se o polinômio interpolador de Newton.
+
+### Erro associado
+
+Pode-se calcular o erro máximo de uma função, por exemplo, no segundo grau, a partir da expressão:
+
+$$ Err(x)=\frac{(x-x_0)(x-x_1)(x-x_2)}{3!}\cdot{}\max{}f^{(3)}(\epsilon) $$
+
+Tal que $$\max{}f^{(3)}$$ é o valor máximo da terceira derivada -- da função original -- no ponto $$x$$ onde deseja-se determinar o limite de erro máximo.
