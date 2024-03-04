@@ -28,3 +28,5 @@ Dado tempo necessário, como as ligações químicas tendem a atingir um estado 
 - Polímeros (complexas)
 - Célula unitária
 
+
+
